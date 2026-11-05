@@ -1,0 +1,78 @@
+.education-section {
+  text-align: left;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 700px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), var(--violet), transparent);
+  opacity: 0.4;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 28px;
+}
+
+.timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  border: 2px solid var(--surface-border);
+  z-index: 1;
+}
+
+.timeline li.current .timeline-marker {
+  border-color: var(--accent);
+  background: var(--accent-gradient);
+  box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.2), 0 0 16px rgba(99, 102, 241, 0.6);
+}
+
+.timeline-content {
+  padding: 20px 24px;
+}
+
+.timeline-period {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.timeline-content h3 {
+  margin: 6px 0 2px;
+  font-size: 20px;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.timeline-institution {
+  font-weight: 600;
+  color: #c7d2fe;
+  margin-bottom: 8px;
+}
+
+.timeline-description {
+  color: var(--text-dim);
+}
